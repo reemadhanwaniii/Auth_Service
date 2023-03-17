@@ -5,7 +5,6 @@ const apiRoutes = require('./routes/index');
 const db = require('./models/index');
 const { PORT } = require('./config/serverConfig.js');
 
-const { User,Role } = require('./models/index');
 
 const prepareAndStartServer = async () => {
 
@@ -18,15 +17,7 @@ const prepareAndStartServer = async () => {
             db.sequelize.sync({alter : true});
         }
 
-        //  const u1 = await User.findByPk(1);
-        //  const r1 = await Role.findByPk(2);
-     
-        //  u1.addRole(r1);
-
-        // const response =  await u1.getRoles();
-        // const response1 =  await r1.getUsers();
-        // const response2 =  await u1.hasRoles();
-        // console.log(response);
+        
         
     });
 }
